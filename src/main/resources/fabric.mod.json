@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "itemadvisor",
+	"version": "${version}",
+	"name": "ItemAdvisor",
+	"description": "Rates items in the inventory and overlays color-coded advice.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"itemadvisor.ItemAdvisor"
+		],
+		"client": [
+			"itemadvisor.ItemAdvisorClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "keep-or-dump.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
